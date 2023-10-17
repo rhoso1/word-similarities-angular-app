@@ -1,0 +1,2 @@
+# word-similarities-angular-app
+ 
