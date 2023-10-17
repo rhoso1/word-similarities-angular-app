@@ -1,4 +1,4 @@
 export const environment = {
     production: true,
-    apiBaseUrl: 'api/wordpairs',
+    apiBaseUrl: 'https://rhoso1.github.io/word-similarities-node-app/',
   };
