@@ -1,0 +1,45 @@
+@import "../../assets/sass/colors.scss";
+@import "../../assets/sass/variables.scss";
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 10rem 1rem;
+
+  .title {
+    font: 24px $aleckBold;
+    color: $dimGray;
+    text-align: center;
+  }
+  app-search {
+    padding: 4rem;
+    width: 48rem;
+    max-width: 48rem;
+    align-self: center;
+  }
+  .word-pairs {
+    width: 48rem;
+    align-self: center;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 2rem calc($gap / 2);
+    box-sizing: border-box;
+    app-word-card {
+      flex: 1 0 calc(33.333% - #{$gap});
+      margin: 0;
+      box-sizing: border-box;
+    }
+  }
+  @media (max-width: 768px) {
+    app-search {
+      max-width: 24rem;
+    }
+  }
+  .no-similarities {
+    display: flex;
+    justify-content: center;
+    font: 14px $aleckLight;
+    color: $silver;
+  }
+}

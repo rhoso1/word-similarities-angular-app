@@ -1,0 +1,10 @@
+<div class="container">
+  <div class="logo-section" (click)="navigateToHomePage()">
+    <img src="assets/images/logo.png" alt="Logo" />
+    <p>Similarities</p>
+  </div>
+  <app-menu-dropdown
+    [isExpanded]="isExpanded"
+    (click)="isExpanded = !isExpanded"
+  ></app-menu-dropdown>
+</div>

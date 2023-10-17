@@ -1,0 +1,56 @@
+@import "../../../../assets/sass/colors.scss";
+@import "../../../../assets/sass/variables.scss";
+
+.container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  border: 1px solid $silver;
+  border-radius: 3px;
+  width: 100%;
+  font-size: 14px;
+  &:focus-within {
+    border: 1px solid $turquoise;
+  }
+  .input-wrapper {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    border-right: 0.5px solid $silver;
+    margin: 0;
+    &:focus-within {
+      border: none;
+    }
+    input {
+      padding: 14px 8px;
+      border: none;
+      align-self: center;
+      color: #676a6c;
+      width: 100%;
+      font: 16px $aleckRegular;
+      &:focus {
+        outline: none;
+      }
+      &::placeholder {
+        font: 14px $aleckLight;
+        color: $silver;
+      }
+    }
+    .fa-search {
+      align-self: center;
+      padding-left: 12px;
+      color: $silver;
+    }
+  }
+  .clear-btn {
+    display: flex;
+    justify-content: flex-end;
+    border: none;
+    padding: 14px;
+    align-self: center;
+    background-color: $mintGreen;
+    color: $dimGray;
+    font: 16px $aleckRegular;
+    cursor: pointer;
+  }
+}

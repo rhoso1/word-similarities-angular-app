@@ -1,0 +1,44 @@
+<div class="container">
+  <label class="title">Add new word pair</label>
+  <form [formGroup]="wordPairForm" (ngSubmit)="onSubmit()" class="add-new-pair">
+    <div class="form-row">
+      <label for="initial-word">Initial word:</label>
+      <input
+        type="text"
+        id="initialWord"
+        formControlName="initialWord"
+        placeholder="Initial word"
+        (focus)="shouldShowSuccessMessage = false;"
+      />
+      <app-error-label
+        *ngIf="
+          submitted &&
+          wordPairForm.get('initialWord')!.hasError('invalidPattern')
+        "
+        [errorMessage]="'Invalid input. Please use only letters.'"
+      ></app-error-label>
+    </div>
+    <div class="form-row">
+      <label for="similar-word">Similar word:</label>
+      <input
+        type="text"
+        id="similarWord"
+        formControlName="similarWord"
+        placeholder="Similar word"
+        (focus)="shouldShowSuccessMessage = false;"
+      />
+      <app-error-label
+        *ngIf="
+          submitted &&
+          wordPairForm.get('similarWord')!.hasError('invalidPattern')
+        "
+        [errorMessage]="'Invalid input. Please use only letters.'"
+      ></app-error-label>
+    </div>
+    <div class="footer-section">
+        <button type="submit">Submit</button>
+        <span *ngIf="shouldShowSuccessMessage" class="success-message">You have added new similar words pair!</span>
+    </div>
+  </form>
+  <button (click)="goBackToHome()" class="back-home"><i class="fa-solid fa-arrow-left"></i>Back to Home</button>
+</div>

@@ -1,0 +1,35 @@
+@import '../../../../assets/sass/colors.scss';
+@import '../../../../assets/sass/variables.scss';
+
+.container {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    background-color: $mainBlack;
+}
+.logo-section {
+    display: flex;
+    flex-direction: row;
+    cursor: pointer;
+    img {
+        padding: 8px 0 8px 8px;
+        width: 50px;
+        height: 40px;
+        filter: $mintGreenFilter
+    }
+    p {
+        font: 18px $aleckBold;
+        color: $mintGreen;
+        align-self: center;
+    }
+}
+app-menu-dropdown {
+    display: block;
+    align-self: center;
+    padding-right: 24px;
+}

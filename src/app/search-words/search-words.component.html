@@ -1,0 +1,20 @@
+<div class="container">
+  <h3 class="title">
+    Life becomes significantly more enchanting when adorned with similar words...
+  </h3>
+  <app-search
+    [placeholder]="'Search synonymous'"
+    (searchDataInput)="searchData($event)"
+    (clearSearchData)="clearData()"
+  ></app-search>
+  <ng-container *ngIf="isInputTouched">
+    <ng-container *ngIf="searchedPairs.length; else noSimilarities">
+      <div class="word-pairs">
+        <app-word-card *ngFor="let word of searchedPairs" [word]="word"></app-word-card>
+      </div>
+    </ng-container>
+  </ng-container>
+  <ng-template #noSimilarities>
+    <span class="no-similarities">No similar word has been found!</span>
+  </ng-template>
+</div>

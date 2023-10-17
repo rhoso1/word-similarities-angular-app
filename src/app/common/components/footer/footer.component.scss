@@ -1,0 +1,43 @@
+@import "../../../../assets/sass/colors.scss";
+@import "../../../../assets/sass/variables.scss";
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  background-color: $mainBlack;
+  text-align: center;
+  color: $mintGreen;
+  font-family: $aleckLight;
+  padding: 16px;
+
+  .social-media-section {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding-bottom: 16px;
+    i {
+      color: $mintGreen;
+      font-size: 20px;
+      margin: 4px;
+      cursor: pointer;
+    }
+  }
+  .copyright-section {
+    font-size: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    .fa-copyright {
+      align-self: center;
+    }
+    p {
+      margin: 0 4px 0 2px;
+    }
+  }
+}

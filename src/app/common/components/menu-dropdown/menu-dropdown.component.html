@@ -1,0 +1,9 @@
+<i class="fa-solid fa-bars"></i>
+
+<ng-container *ngIf="isExpanded">
+  <ul class="items-section">
+    <li *ngFor="let menuItem of menuItems" (click)="performAction(menuItem.action)">
+      {{ menuItem.label }}
+    </li>
+  </ul>
+</ng-container>

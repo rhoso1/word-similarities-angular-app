@@ -1,0 +1,15 @@
+@import "../../../../assets/sass/colors.scss";
+@import "../../../../assets/sass/variables.scss";
+
+.error-container {
+    display: flex;
+    align-content: flex-start;
+    background-color: $error-background;
+    padding: 8px;
+    
+    .error-message {
+      font: 12px $aleckRegular;
+      color: $error-red;
+      line-height: 17px;
+    }
+  }

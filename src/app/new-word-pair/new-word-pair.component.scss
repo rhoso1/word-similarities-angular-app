@@ -1,0 +1,78 @@
+@import "../../assets/sass/colors.scss";
+@import "../../assets/sass/variables.scss";
+
+.container {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  height: 90vh;
+
+  .title {
+    font: 16px $aleckLight;
+    padding-bottom: 32px;
+    color: $outerSpace;
+  }
+  .add-new-pair {
+    max-width: 400px;
+    width: 100%;
+    padding: 64px;
+    border: 1px solid $silver;
+    border-radius: 3px;
+
+    .form-row {
+      display: flex;
+      flex-direction: column;
+      margin-bottom: 24px;
+
+      label {
+        margin-bottom: 8px;
+      }
+
+      input {
+        padding: 8px;
+        border: 1px solid $silver;
+        border-radius: 3px;
+        color: #676a6c;
+        width: calc(100% - 16px); // Adjusted width
+        font: 16px $aleckRegular;
+        &:focus {
+          outline: 1px solid $turquoise;
+        }
+        &::placeholder {
+          font: 14px $aleckLight;
+          color: $silver;
+        }
+      }
+    }
+    .footer-section {
+      display: flex;
+      flex-direction: column;
+      button {
+        border: none;
+        padding: 10px;
+        background-color: $mintGreen;
+        color: $dimGray;
+        font: 16px $aleckRegular;
+        cursor: pointer;
+      }
+      .success-message {
+        padding-top: 32px;
+        font: 16px $aleckLight;
+        align-self: center;
+        color: $turquoise;
+      }
+    }
+  }
+  .back-home {
+    border: none;
+    background-color: transparent;
+    margin-top: 16px;
+    font: 14px $aleckLight;
+    color: $smokeGreen;
+    cursor: pointer;
+    .fa-arrow-left {
+        margin-right: 4px;
+    }
+  }
+}

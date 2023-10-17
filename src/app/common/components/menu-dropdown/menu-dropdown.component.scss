@@ -1,0 +1,35 @@
+@import "../../../../assets/sass/colors.scss";
+@import "../../../../assets/sass/variables.scss";
+
+.fa-bars {
+  color: $mintGreen;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.items-section {
+  position: absolute;
+  list-style: none;
+  top: 42px;
+  right: 25px;
+  display: flex;
+  flex-direction: column;
+  font: 14px $aleckLight;
+  background-color: white;
+  text-align: center;
+  margin: 0;
+  border-radius: 3px;
+  border: 1px solid $whiteSmoke;
+  color: $outerSpace;
+  padding: 0;
+
+  li {
+    cursor: pointer;
+    padding: 16px;
+    background-color: white;
+    border-bottom: 1px solid $whiteSmoke;
+    &:hover {
+      background-color: $silver;
+    }
+  }
+}

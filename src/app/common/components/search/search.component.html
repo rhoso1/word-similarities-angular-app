@@ -1,0 +1,13 @@
+<div class="container">
+    <label class="input-wrapper">
+        <i class="fa fa-search"></i>
+        <input
+            class="search-input"
+            type="text"
+            name="searchQueryControl"
+            placeholder="{{ placeholder }}"
+            [(ngModel)]="searchQuery"
+            (input)="searchData()" />
+    </label>
+    <button class="btn btn-default clear-btn" (click)="clearSearch()">Clear</button>
+</div>

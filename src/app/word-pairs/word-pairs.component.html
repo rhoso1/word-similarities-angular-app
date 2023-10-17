@@ -1,0 +1,12 @@
+
+<div class="container">
+    <div *ngFor="let words of allWordPairs" class="word-pair-group">
+      <!-- First element on the top -->
+      <span class="initial-word">{{ words[0] }}</span>
+      <!-- Other similar words on the next line -->
+      <div class="similar-words">
+        <app-word-card *ngFor="let word of words.slice(1)" [word]="word"></app-word-card>
+      </div>
+    </div>
+  </div>
+  
