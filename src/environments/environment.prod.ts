@@ -1,5 +1,5 @@
 export const environment = {
   production: true,
   apiBaseUrl:
-    "https://word-similarities-backend-3ia1.onrender.com/api/wordpairs",
+    "https://word-similarities-backend-ah6m.onrender.com/api/wordpairs",
 };
